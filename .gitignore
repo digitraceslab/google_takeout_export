@@ -1,0 +1,38 @@
+# Django-specific files
+*.sqlite3
+db.sqlite3
+local_settings.py
+
+# Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+
+# Test files
+*.pytest_cache/
+test_results/
+coverage/
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Logs
+logs/
+
+# Compiled files
+*.egg-info/
+dist/
+build/
+
+# Static files
+static/
+media/
+
+# Temporary files
+*.swp
+*~
