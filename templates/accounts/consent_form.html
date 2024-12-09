@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4><a href="/">Back to the Main Page</a></h4>
+
+  <h2>Participation confirmation</h2>
+
+<p>
+This study ...
+</p>
+
+<form method="post" class="form-check">
+  {% csrf_token %}
+
+<p>
+{{form.field_1}} I have understood that participation is voluntary and ...
+</p>
+
+<p>
+{{form.field_2}} I have received sufficient information about the research study, I have had the possibility to have my questions answered, I have understood the information and I wish to participate in the research study.
+</p>
+
+<p>
+{{form.field_3}} I have read and understood the Information Sheet (as well as the Privacy Notice included) that was given to me and I have sufficient information about the process of the research.
+</p>
+
+<p>
+{{form.field_4}} I understand that my participation in the research is completely voluntary and that I have the right to discontinue my participation at any stage.
+</p>
+
+<p>
+{{form.field_5}} I understand that the research data is gathered only for the purpose of scientific research in the public interest and I understand my rights regarding my personal data, as explained in the Privacy Notice.
+</p>
+
+<p>
+{{form.field_6}} I acknowledge that I have received the information necessary to make an informed decision about my participation in the research, my questions have been answered and I agree to volunteer as a research subject.
+</p>
+
+   <button class="btn-primary btn" type="submit">Submit</button>
+  </form>
+{% endblock %}

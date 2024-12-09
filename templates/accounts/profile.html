@@ -1,2 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <h1>{{ object.username }}</h1>
 <p>Email: {{ object.email }}</p>
+
+{% if object.consent %}
+    <p>Consent status: Consented</p>
+    <a href="{% url 'consent' %}">View consent form</a>
+{% else %}
+    <p>Consent status: Not Consented</p>
+    <a href="{% url 'consent' %}">Give Consent</a>
+{% endif %}
+{% endblock %}
