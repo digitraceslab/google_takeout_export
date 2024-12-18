@@ -47,3 +47,19 @@ class ConsentForm(forms.ModelForm):
         cleaned_data = super().clean()
         cleaned_data['consent'] = True
         return cleaned_data
+
+
+class ConsentWithdrawForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['consent']
+    
+    def clean(self):
+        ''' If the form gets submitted, the user has withdrawn consent. '''
+        cleaned_data = super().clean()
+        cleaned_data['consent'] = False
+        return cleaned_data
+
+
+class GoogleTakeoutUploadForm(forms.Form):
+    file = forms.FileField()

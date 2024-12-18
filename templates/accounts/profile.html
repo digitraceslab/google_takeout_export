@@ -7,9 +7,11 @@
 
 {% if object.consent %}
     <p>Consent status: Consented</p>
-    <a href="{% url 'consent' %}">View consent form</a>
+    <a href="{% url 'withdraw_consent' %}">View consent form</a>
 {% else %}
     <p>Consent status: Not Consented</p>
     <a href="{% url 'consent' %}">Give Consent</a>
 {% endif %}
+    <br>
+    <a href="{% url 'logout' %}">Logout</a>
 {% endblock %}
