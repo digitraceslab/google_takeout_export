@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Google Takeout Instructions</h2>
+    <p>
+        Follow these instructions to download your Google
+        Takeout data and upload it to our service
+    </p>
+    <ol>
+        <li>
+            <p>Go to <a href="https://takeout.google.com/"> Google Takeout website</a></p>
+            <img src="{% static 'images/instructions_1.png' %}" alt="Image of the Google Takeout Website" class="img-fluid">
+        </li>
+        <li>
+            <p>Select the data you want to donwload and click "Next Step".</p>
+            <img src="{% static 'images/instructions_2.png' %}" alt="Image of the Next Step button" class="img-fluid">
+        </li>
+        <li>
+            <p>Keep file type as "zip" and select "50GB" as the file size. This makes sure you will need to donwload only one file.</p>
+        </li>
+        <li>
+            <p>Click "Create Export" and wait for the download to finish.</p>
+            <img src="{% static 'images/instructions_3.png' %}" alt="Image of the Create Export button" class="img-fluid">
+        </li>
+        <li>
+            <p>
+                The next page shows any previous exports you have created and shows that the
+                current export is in progress. You will receive an email when the export is ready.
+                This may take anywhere from several hours to a few days.
+            </p>
+        </li>
+        <li>
+            <p>
+                Once you receive the email, click on the link in the email to go to a download 
+                page. Sign in with your Google account and click "Download".
+            </p>
+        </li>
+        <li>
+            <p>
+                Once the download is complete, go to the
+                <a href="{% url 'upload_takeout' %}">Upload Google Takeout</a>
+                page. Click on "Choose File" and navigate to the downloaded file. Click "Upload".
+            </p>
+        </li>
+        <li>
+            <p>
+                Once the file is uploaded, your profile page will open. The profile page displays
+                file you have uploaded to the service and the status of their processing.
+            </p>
+        </li>
+    </ol>
+</div>
+
+{% endblock %}
