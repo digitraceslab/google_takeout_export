@@ -8,6 +8,8 @@
 {% if object.consent %}
     <p>Consent status: Consented</p>
     <a href="{% url 'withdraw_consent' %}">View consent form</a>
+    <br>
+    <a href="{% url 'upload_takeout' %}">Upload Google Takeout</a>
 {% else %}
     <p>Consent status: Not Consented</p>
     <a href="{% url 'consent' %}">Give Consent</a>
