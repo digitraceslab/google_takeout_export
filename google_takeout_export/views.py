@@ -6,7 +6,7 @@ def index(request):
     return render(request, 'index.html')
 
     
-def get_takeout_items(request, study_id):
+def get_takeout_items(request, study_id="test"):
     # Define the takeout items for each study
     takeout_items = {
         'test': [
