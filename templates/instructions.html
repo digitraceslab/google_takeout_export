@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -19,7 +20,7 @@
             <b>Edge:</b> <a href="#">Microsoft Edge Extensions</a>
         </li>
     </ol>
-    
+
     <h3>Without the extensions</h3>
     <p>
         Follow these instructions to download your Google
@@ -33,6 +34,7 @@
         <li>
             <p>Select the data you want to donwload and click "Next Step".</p>
             <img src="{% static 'images/instructions_2.png' %}" alt="Image of the Next Step button" class="img-fluid">
+
         </li>
         <li>
             <p>Keep file type as "zip" and select "50GB" as the file size. This makes sure you will need to donwload only one file.</p>
