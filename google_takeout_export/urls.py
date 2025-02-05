@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
 from . import views
+from accounts.views import register as accounts_register
 from django.urls import path, include
 
 urlpatterns = [
@@ -24,6 +25,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
+    path('register/', accounts_register, name='register'),
     path('instructions/', views.instructions, name='instructions'),
     path('accounts/', include('accounts.urls')),
     path('api/takeout_items/', views.get_takeout_items, name='get_takeout_items_default'),

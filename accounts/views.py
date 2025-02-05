@@ -14,6 +14,19 @@ from .models import User
 from . import forms
 
 
+def register(request):
+    if request.method == 'POST':
+        form = forms.RegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            user.save()
+            return redirect('login')
+    else:
+        form = forms.RegistrationForm()
+    return render(request, 'accounts/register.html', {'form': form})
+
+
 @method_decorator(login_required, name='dispatch')
 class UserProfileDetailView(DetailView):
     model = User
