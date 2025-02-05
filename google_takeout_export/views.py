@@ -5,6 +5,10 @@ from django.http import JsonResponse
 def index(request):
     return render(request, 'index.html')
 
+
+def instructions(request):
+    return render(request, 'instructions.html')
+    
     
 def get_takeout_items(request, study_id="test"):
     # Define the takeout items for each study

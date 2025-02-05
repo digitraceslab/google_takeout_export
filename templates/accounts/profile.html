@@ -5,6 +5,8 @@
 <h1>{{ object.username }}</h1>
 <p>Email: {{ object.email }}</p>
 
+<p><a href="{% url 'instructions' %}">Instructions</a></p>
+
 {% if object.consent %}
     <p>Consent status: Consented</p>
     <a href="{% url 'withdraw_consent' %}">View consent form</a>
