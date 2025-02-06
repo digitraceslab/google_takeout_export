@@ -8,7 +8,9 @@ def index(request):
 
 def instructions(request):
     return render(request, 'instructions.html')
-    
+
+def privacy_notice(request):
+    return render(request, 'privacy_notice.html')
     
 def get_takeout_items(request, study_id="test"):
     # Define the takeout items for each study

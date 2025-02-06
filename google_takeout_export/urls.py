@@ -27,6 +27,7 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('register/', accounts_register, name='register'),
     path('instructions/', views.instructions, name='instructions'),
+    path('privacy_notice/', views.privacy_notice, name='privacy_notice'),
     path('accounts/', include('accounts.urls')),
     path('api/takeout_items/', views.get_takeout_items, name='get_takeout_items_default'),
     path('api/takeout_items/<str:study_id>/', views.get_takeout_items, name='get_takeout_items'),

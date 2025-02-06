@@ -5,9 +5,16 @@
 </head>
 <body>
     <h1>Welcome to the Data Donation App</h1>
+    <p>
+        <a href="{% url 'privacy_notice' %}" class="btn btn-primary">Privacy Notice</a>
+    </p>
+
     {% if user.is_authenticated %}
+    <p>
         <a href="{% url 'profile' %}" class="btn btn-primary">Profile</a>
-        <br>
+    </p>
+    
+    <br>
         <form method="post" action="{% url 'logout' %}" style="display:inline;">
             {% csrf_token %}
             <button type="submit" class="btn btn-secondary">Logout</button>
